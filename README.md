@@ -9,7 +9,7 @@ This repository contains the files and definitions necessary to work with **bina
 ## Quick start
 
 * Want to use protocol buffers in your project directly? 
-  - Use `openbikesensor.proto` to your liking. Check
+  - Compile and import [`openbikesensor.proto`](./openbikesensor.proto). Check
     [protobuf.dev](https://protobuf.dev/) on how to do that in your language.
 * Want to parse and write files from python? 
   - Install this repository as a package (`make install-dev` or `make install`)
