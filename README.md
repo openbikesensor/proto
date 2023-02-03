@@ -1,9 +1,10 @@
 # OpenBikeSensor Recording Format
 
-This repository contains the files and definitions necessary to work with binary recordings created by and for OpenBikeSensor devices, software and compatible projects.
+**Note:** The contents of this repository are current a draft. Don't use this for important projects yet, as things might still change, and quickly.
 
-The goal is to provide a standardized yet extensible format that can be used by any programmer to extend the system to their needs. Most application parts will be compatible with each other by implementing this format.
+This repository contains the files and definitions necessary to work with **binary** recordings created by and for OpenBikeSensor devices, software and compatible projects.
 
+🔍 Looking for the **CSV** Format description? This is not it, [look here instead](https://github.com/openbikesensor/OpenBikeSensorFirmware/blob/master/docs/software/firmware/csv_format.md).
 
 ## Quick start
 
