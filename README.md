@@ -1,6 +1,6 @@
 # OpenBikeSensor Recording Format
 
-**Note:** The contents of this repository are current a draft. Don't use this for important projects yet, as things might still change, and quickly.
+⚠️🚧 The contents of this repository are current a draft. Don't use this for important projects yet, as things might still change, and quickly.
 
 This repository contains the files and definitions necessary to work with **binary** recordings created by and for OpenBikeSensor devices, software and compatible projects.
 
