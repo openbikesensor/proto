@@ -84,11 +84,8 @@ message Geolocation {
   // true north (0...360).
   float course_over_ground = 6;
 
-  // Number of visible satellites (GPS).
-  int32 satellites = 10;
-
   // Horizontal accuracy (GPS).
-  float hdop = 11;
+  float hdop = 10;
 }
 
 message UserInput {
