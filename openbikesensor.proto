@@ -37,11 +37,15 @@ message DistanceMeasurement {
   // The distance measured, in meters.
   float distance = 2;
 
-  // A fraction (0..1) that represents the quality of this measurment, or the
-  // degree of certainty for this value to be accurate.
+  // A fraction (0..1) that represents the quality of this measurement, or the
+  // degree of certainty for this value to be accurate. 
+  //   0       not specified
+  //   0<x<=1  relative quality
+  //   1       perfect measurement
+  //   else    invalid value
   float quality = 3;
 
-  // The raw time of flight measured (if applicable) in nanoseconds. Depending
+  // The raw time of flight measured (if applicable) in picoseconds. Depending
   // on sensor type, converting this to a distance with additional information
   // (if available) may be more accurate than the provided distance (e. g.
   // speed of sound depends on temperature and pressure). It is assumed that
@@ -65,7 +69,7 @@ message TextMessage {
 message Geolocation {
   int32 source_id = 1;
 
-  // Position on WSG84 in degrees, same as
+  // Position on WSG84 in degrees, see also
   // https://github.com/googleapis/googleapis/blob/master/google/type/latlng.proto
   double latitude = 2;
   double longitude = 3;
@@ -73,16 +77,17 @@ message Geolocation {
   // Altitude above mean sea level, in meters.
   double altitude = 4;
 
-  // ground speed, in meters per second
+  // Ground speed, in meters per second.
   float ground_speed = 5;
 
-  // degrees clockwise from true north
-  float heading = 6;
+  // Direction of travel, in degrees clockwise from 
+  // true north (0...360).
+  float course_over_ground = 6;
 
-  // number of visible satellites
+  // Number of visible satellites (GPS).
   int32 satellites = 10;
 
-  // horizontal accuracy of GPS
+  // Horizontal accuracy (GPS).
   float hdop = 11;
 }
 
@@ -175,7 +180,7 @@ message Metadata {
 
   // Note: Metadata is usually track or recording specific. A recording might
   // start with a metadata event, but a stream of events might not be monitored
-  // when it starts. There might be a special routine to request emission a
+  // when it starts. There might be a special routine to request emission of a
   // metadata event on demand, such as when a recording device starts listening
   // on a stream. This depends on the transmission protocol in use for the
   // respective data stream and is potentially documented there.
@@ -185,7 +190,7 @@ message Metadata {
   // they do, it may be assumed that the first metadata event in the recording
   // determines the initial state of the value, and a change in the value takes
   // effect at the moment of the first event that emitted it. Partial metadata
-  // may be emitted for separate sets keys, and may be merged by the
+  // may be emitted for separate sets of keys, and may be merged by the
   // application into a single state (or not, depending on meaning).
 }
 
