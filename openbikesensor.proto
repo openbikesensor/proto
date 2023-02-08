@@ -82,11 +82,8 @@ message Geolocation {
   // number of visible satellites
   int32 satellites = 10;
 
-  // HDOP value from GPS
+  // horizontal accuracy of GPS
   float hdop = 11;
-
-  // in decibels ?
-  float signal_noise_ratio = 12;
 }
 
 message UserInput {
