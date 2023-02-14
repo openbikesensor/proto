@@ -1,7 +1,5 @@
 syntax = "proto3";
 
-import "any.proto";
-
 package openbikesensor;
 
 message Time {
@@ -234,7 +232,9 @@ message Event {
     BatteryStatus battery_status = 15;
   }
 
-  // Addons may place their contents here.
-  repeated google.protobuf.Any addons = 99;
+  // Addons may place their contents here -- removed for now, as
+  // google.protobuf.Any is hard to compile with NanoPB, and we don't need
+  // it yet.
+  // repeated google.protobuf.Any addons = 99;
 }
 
