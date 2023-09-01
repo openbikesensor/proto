@@ -15,3 +15,8 @@ for event in read_serial("/dev/ttyUSB0"):
 
     if event.HasField("text_message"):
         print(f"[Message] {event.text_message.text}")
+
+    if event.HasField("user_input"):
+        ui = event.user_input
+        print(f"Button pressed\n", ui)
+    #print(event)
