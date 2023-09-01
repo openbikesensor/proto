@@ -12,7 +12,7 @@ setup(
     install_requires=[
         "protobuf~=4.21.12",
         "cobs~=1.2.0",
-        "pyserial>=3.5<=3.6",
+        "pyserial>=3.5,<=3.6",
     ],
     entry_points={
         "console_scripts": [
