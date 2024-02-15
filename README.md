@@ -50,7 +50,7 @@ Message separation is achieved using [COBS](https://en.wikipedia.org/wiki/Consis
 
 A file containing messages with this format shall have the extension `.obsr` (OpenBikeSensor Recording) and contain messages encoded into messages using [COBS](https://en.wikipedia.org/wiki/Consistent_Overhead_Byte_Stuffing). This makes these files easy to produce as a stream by appending data as it becomes available.
 
-The file may optionally be compressed further using `gzip`, in which case the extension `.obsp.gz` should be used. Consumers of files should try to auto-detect the usage of compression and also allow `.obsp` files (or a file of any ending for that matter) to be either a compressed or an uncompressed COBS stream.
+The file may optionally be compressed further using `gzip`, in which case the extension `.obsr.gz` should be used. Consumers of files should try to auto-detect the usage of compression and also allow `.obsr` files (or a file of any ending for that matter) to be either a compressed or an uncompressed COBS stream.
 
 
 ## Message Semantics
