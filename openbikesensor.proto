@@ -72,7 +72,7 @@ message Geolocation {
   double latitude = 2;
   double longitude = 3;
 
-  // Altitude above mean sea level, in meters.
+  // Altitude above WGS84 reference ellipsoid, in meters.
   double altitude = 4;
 
   // Ground speed, in meters per second.
