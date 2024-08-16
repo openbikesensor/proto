@@ -10,8 +10,8 @@ setup(
     packages=find_packages(),
     package_data={},
     install_requires=[
-        "protobuf~=4.21.12",
-        "cobs~=1.2.0",
+        "protobuf~=5.27.3",
+        "cobs~=1.2.1",
         "pyserial>=3.5,<=3.6",
     ],
     entry_points={
